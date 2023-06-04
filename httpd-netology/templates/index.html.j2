@@ -1,0 +1,9 @@
+Welcome to Apache!
+
+CPU: {{ ansible_processor [2] }}
+
+RAM: {{ ansible_memtotal_mb }}
+
+Storage: {{ ansible_devices.sda.size }}
+
+IP: {{ ansible_all_ipv4_addresses [1] }}

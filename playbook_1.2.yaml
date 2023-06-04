@@ -1,0 +1,22 @@
+---
+- name: "Install and enable tuned"
+  hosts: net1,net2
+  become: true
+  tasks:
+  - name: Install the latest version of tuned YUM
+    ansible.builtin.yum:
+      name: tuned
+      state: latest
+    when: ansible_facts['os_family'] == "RedHat"
+  - name: Install the latest version of tuned APT
+    ansible.builtin.apt:
+      name: tuned
+      state: latest
+    when: ansible_facts['os_family'] == "Debian"
+  - name: Make sure a tuned is running and enabled
+    ansible.builtin.systemd:
+      state: started
+      name: tuned
+      enabled: true
+
+...

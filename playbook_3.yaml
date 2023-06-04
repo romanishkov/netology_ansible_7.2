@@ -1,0 +1,12 @@
+---
+- name: "Install and run httpd"
+  hosts: all
+  become: true
+  roles:
+  tasks:
+  - name: Install httpd
+    ansible.builtin.include_role:
+      name: httpd-netology
+
+
+...

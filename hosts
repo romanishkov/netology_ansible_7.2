@@ -1,0 +1,5 @@
+[net1]
+192.168.1.39 ansible_ssh_user=vagrant
+
+[net2]
+192.168.1.104 ansible_ssh_user=vagrant
