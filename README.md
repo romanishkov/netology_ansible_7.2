@@ -50,6 +50,7 @@
 
 
 [Playbook](playbook_3.yaml)
+
 [Role](/httpd-netology/)
 ![](images/3.1.png)
 ![](images/3.2.png)
